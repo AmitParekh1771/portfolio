@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:11ty": "eleventy --serve",
+    "dev:css": "tailwindcss -i ./src/assets/styles/tailwind.css -o ./_site/assets/styles/tailwind.css --watch",
+    "build:11ty": "eleventy",
+    "build:css": "tailwindcss -i ./src/assets/styles/tailwind.css -o ./_site/assets/styles/tailwind.css"
   },
   "keywords": [],
   "author": "",
