@@ -41,4 +41,4 @@ const qnas = [
     },
     // ... (continuing with more questions and answers)
 ]
-  
+console.log("Hello world")
