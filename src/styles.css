@@ -9,3 +9,9 @@
 ::-webkit-scrollbar-thumb { height: 50px; background-color: rgb(156 163 175); border-radius: 3px;}
 ::-webkit-scrollbar-corner { background-color: rgb(31 41 55);}
 ::-webkit-resizer { background-color: rgb(156 163 175);}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: currentColor; }
+}
