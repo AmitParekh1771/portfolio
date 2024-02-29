@@ -3,55 +3,56 @@ import BM25 from "okapibm25";
 const qnas = [
   {
     "id": "1",
-    "question": "I want to create a dynamic website that stands out.",
-    "answer": "Absolutely! I'll craft a dynamic website that not only stands out visually but also offers interactive features. By combining striking design elements with smooth animations, your website will leave a lasting impression on visitors."
+    "question": "I want to turn my design into an Angular application.",
+    "answer": "I'll help you turn your Figma/XD design into an efficient and scalable Angular code. With my experience in building user interfaces, I can collaborate effectively with you to translate your design into a functional app. I'll maintain industry standards and best practices for maintainable and readable code."
   },
   {
     "id": "2",
-    "question": "I want to modernize my legacy software.",
-    "answer": "No problem! I'll carefully analyze your legacy software, identify outdated components, and create a modernization strategy. Through code refactoring and integrating contemporary technologies, we'll transform your software into a robust and efficient solution."
+    "question": "I want to improve performance of my Angular application.",
+    "answer": "I can analyze your application and identify performance bottlenecks. I'll use techniques like lazy loading, code splitting, and change detection optimization to improve responsiveness and user experience."
   },
   {
     "id": "3",
-    "question": "I want to enhance my website's accessibility.",
-    "answer": "Accessibility is key! I'll ensure your website is inclusive and user-friendly for all. By adhering to WCAG guidelines, implementing alt text, and optimizing keyboard navigation, we'll make sure everyone can engage with your content seamlessly."
+    "question": "I want to integrate an external API into my Angular application.",
+    "answer": "I'm familiar with various API integration techniques in Angular. I can help you fetch data, handle responses, and seamlessly integrate the API into your application logic."
   },
   {
     "id": "4",
-    "question": "I want to integrate a third-party API into my application.",
-    "answer": "Absolutely, I'll seamlessly integrate the desired third-party API into your application. Whether it's payment gateways, social media, or other services, I'll ensure smooth communication, proper error handling, and data security."
+    "question": "I want to implement state management in my Angular application.",
+    "answer": "I can you on developing the most suitable state management solution for your application, like NgRx or Redux. I'll help implement the chosen approach effectively to manage application state."
   },
   {
     "id": "5",
-    "question": "I want to develop a custom plugin for my CMS.",
-    "answer": "You're in the right place! I'll create a custom plugin tailored to your CMS. This plugin will add the exact functionalities you need, ensuring compatibility, efficient code, and a seamless user experience."
+    "question": "I want to make my Angular application more secure",
+    "answer": "I can help implement security best practices like proper data validation, user authentication and authorization, and secure communication protocols to protect your application from vulnerabilities."
   },
   {
     "id": "6",
-    "question": "I want to migrate my data to the cloud.",
-    "answer": "Absolutely! I'll plan a smooth migration strategy, moving your data to the cloud while ensuring data integrity and security. With scalable cloud solutions, your data will be easily accessible and well-protected."
+    "question": "I want to implement unit and integration testing in my Angular application.",
+    "answer": "I have experience with testing frameworks like Jest and Jasmine. I can help you set up a testing environment, write comprehensive unit and integration tests, and ensure code quality and maintainability."
   },
   {
-    "id": "7",
-    "question": "I want to optimize my website's images for better performance.",
-    "answer": "Images matter for performance! I'll optimize your images through compression and responsive design techniques. This will result in faster load times, improved user experience, and efficient use of bandwidth."
+    "id": "3",
+    "question": "I need help debugging and fixing errors in my Angular code.",
+    "answer": "Debugging errors in Angular applications can involve various factors. I can leverage my experience to assist you in troubleshooting effectively, utilizing debugging tools (like the Angular CLI or the browser's developer console), analyzing error messages, and applying methodical problem-solving techniques to resolve the issues accurately and efficiently."
   },
   {
     "id": "8",
-    "question": "I want to implement real-time features in my app.",
-    "answer": "Exciting! I'll integrate real-time functionalities like chat, notifications, or collaborative editing into your app using WebSockets or other appropriate technologies. Your users will experience seamless and up-to-the-minute interactions."
+    "question": "I need to deploy my Angular application.",
+    "answer": "I can help you choose a suitable deployment strategy based on your needs. I'm familiar with various deployment platforms like Firebase, Netlify, and AWS, and can guide you through the deployment process."
   },
   {
     "id": "9",
-    "question": "I want to create a seamless omnichannel experience.",
-    "answer": "Absolutely, I'll unify your brand's presence across various platforms, ensuring consistent design and functionality. This will provide your users with a seamless experience whether they're on a website, mobile app, or any other platform."
+    "question": "I want to improve the SEO of my Angular application.",
+    "answer": "I can help you implement SEO best practices in your Angular application, including proper use of meta tags, title tags, and structured data. I can also guide you on optimizing your content and ensuring crawlability by search engines."
   },
   {
     "id": "10",
-    "question": "I want to redesign my e-commerce website for better conversions.",
-    "answer": "Redesign for success! I'll analyze user behavior, implement persuasive design elements, and optimize the checkout process to boost conversions. Your redesigned e-commerce website will entice customers and increase sales."
-  },
+    "question": "I want a freelance Angular developer to join out team for ongoing projects.",
+    "answer": "I'm available for ongoing maintenance and development tasks. I can help you fix bugs, implement new features, and keep your application up-to-date with the latest Angular versions and best practices."
+  }
 ]
+
 
 const answerRef = document.getElementById('answer');
 const questionRef = document.getElementById('question');
@@ -69,9 +70,9 @@ const typer = async (elRef, text, delay, speed) => {
 
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const typer = setInterval(() => {
+      const timer = setInterval(() => {
         if(counter >= n) {
-          clearInterval(typer);
+          clearInterval(timer);
           resolve();
           return;
         }
